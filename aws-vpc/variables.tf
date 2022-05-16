@@ -17,6 +17,7 @@ variable "common_tags" {
 variable "name" {
   type        = string
   description = "Name of VPC."
+  default     = null
 }
 
 variable "cidr" {

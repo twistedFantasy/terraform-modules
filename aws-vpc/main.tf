@@ -2,7 +2,7 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.14.0"
 
-  name = var.name
+  name = var.name == null ? local.base_name : var.name
   cidr = var.cidr
 
   azs             = var.azs

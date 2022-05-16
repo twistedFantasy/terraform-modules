@@ -34,7 +34,7 @@ No resources.
 | <a name="input_enable_dns_hostnames"></a> [enable\_dns\_hostnames](#input\_enable\_dns\_hostnames) | Should be true to enable DNS hostnames in the Default VPC. | `bool` | `true` | no |
 | <a name="input_enable_nat_gateway"></a> [enable\_nat\_gateway](#input\_enable\_nat\_gateway) | Enable NAT gateway for VPC. | `bool` | `true` | no |
 | <a name="input_env_name"></a> [env\_name](#input\_env\_name) | Name of the environment; a short code like 'dev' or 'live-eu'. | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | Name of VPC. | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | Name of VPC. | `string` | `null` | no |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace for the environment. | `string` | n/a | yes |
 | <a name="input_private_subnet_tags"></a> [private\_subnet\_tags](#input\_private\_subnet\_tags) | Additional tags for the private subnets. | `map(any)` | `{}` | no |
 | <a name="input_private_subnets"></a> [private\_subnets](#input\_private\_subnets) | Private subnets for VPC. | `list(string)` | <pre>[<br>  "10.36.1.0/24",<br>  "10.36.2.0/24"<br>]</pre> | no |
