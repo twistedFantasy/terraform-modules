@@ -27,7 +27,8 @@ No resources.
 | <a name="input_azs"></a> [azs](#input\_azs) | Availability zones for VPC. | `list(string)` | `[]` | no |
 | <a name="input_cidr"></a> [cidr](#input\_cidr) | CIDR block for VPC. | `string` | `"10.36.0.0/16"` | no |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Common tags added to all supported resources. | `map(any)` | `{}` | no |
-| <a name="input_create_database_subnet_group"></a> [create\_database\_subnet\_group](#input\_create\_database\_subnet\_group) | Controls if database subnet group should be created (n.b. database\_subnets must also be set). | `bool` | `false` | no |
+| <a name="input_create_database_subnet_group"></a> [create\_database\_subnet\_group](#input\_create\_database\_subnet\_group) | Controls if database subnet group should be created (n.b. database\_subnets must also be set). | `bool` | `true` | no |
+| <a name="input_create_database_subnet_route_table"></a> [create\_database\_subnet\_route\_table](#input\_create\_database\_subnet\_route\_table) | Controls if separate route table for database should be created | `bool` | `true` | no |
 | <a name="input_create_elasticache_subnet_group"></a> [create\_elasticache\_subnet\_group](#input\_create\_elasticache\_subnet\_group) | Controls if elasticache subnet group should be created. | `bool` | `false` | no |
 | <a name="input_database_subnets"></a> [database\_subnets](#input\_database\_subnets) | Database subnets for VPC. | `list(string)` | <pre>[<br>  "10.36.21.0/24",<br>  "10.36.22.0/24"<br>]</pre> | no |
 | <a name="input_elasticache_subnets"></a> [elasticache\_subnets](#input\_elasticache\_subnets) | ElastiCache subnets for VPC. | `list(string)` | `[]` | no |
@@ -45,6 +46,8 @@ No resources.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_database_subnet_group"></a> [database\_subnet\_group](#output\_database\_subnet\_group) | ID of database subnet group |
+| <a name="output_database_subnet_group_name"></a> [database\_subnet\_group\_name](#output\_database\_subnet\_group\_name) | Name of database subnet group |
 | <a name="output_vpc_cidr_block"></a> [vpc\_cidr\_block](#output\_vpc\_cidr\_block) | The CIDR block for the VPC. |
 | <a name="output_vpc_database_subnets"></a> [vpc\_database\_subnets](#output\_vpc\_database\_subnets) | IDs of the VPC's database subnets. |
 | <a name="output_vpc_default_security_group_id"></a> [vpc\_default\_security\_group\_id](#output\_vpc\_default\_security\_group\_id) | The ID of the security group created by default on VPC creation |

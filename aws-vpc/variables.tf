@@ -59,7 +59,13 @@ variable "elasticache_subnets" {
 variable "create_database_subnet_group" {
   type        = bool
   description = "Controls if database subnet group should be created (n.b. database_subnets must also be set)."
-  default     = false
+  default     = true
+}
+
+variable "create_database_subnet_route_table" {
+  type        = bool
+  description = "Controls if separate route table for database should be created"
+  default     = true
 }
 
 variable "create_elasticache_subnet_group" {

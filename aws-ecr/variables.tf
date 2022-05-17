@@ -44,6 +44,12 @@ variable "scan_on_push" {
   default     = true
 }
 
+variable "create_iam_user" {
+  type        = bool
+  description = "If we want to create an IAM user which has access to the ECR."
+  default     = false
+}
+
 variable "iam_users" {
   type        = list(string)
   description = "Allow IAM users within your account to access ECR repository. Full arn should be provided for each user. For example, [\"arn:aws:iam::account-id:user/push-pull-user-1\"]"

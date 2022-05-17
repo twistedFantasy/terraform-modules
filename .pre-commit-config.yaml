@@ -24,6 +24,18 @@ repos:
     rev: "v0.16.0"
     hooks:
       - id: terraform-docs-go
+        args: [ "markdown", "table", "--output-file", "README.md", "./aws-acm" ]
+      - id: terraform-docs-go
+        args: [ "markdown", "table", "--output-file", "README.md", "./aws-cloudfront" ]
+      - id: terraform-docs-go
         args: ["markdown", "table", "--output-file", "README.md", "./aws-ecr"]
       - id: terraform-docs-go
+        args: [ "markdown", "table", "--output-file", "README.md", "./aws-rds" ]
+      - id: terraform-docs-go
+        args: [ "markdown", "table", "--output-file", "README.md", "./aws-s3" ]
+      - id: terraform-docs-go
+        args: [ "markdown", "table", "--output-file", "README.md", "./aws-static-website" ]
+      - id: terraform-docs-go
         args: [ "markdown", "table", "--output-file", "README.md", "./aws-vpc" ]
+      - id: terraform-docs-go
+        args: [ "markdown", "table", "--output-file", "README.md", "./gitlab" ]

@@ -23,6 +23,16 @@ output "vpc_database_subnets" {
   value       = module.vpc.database_subnets
 }
 
+output "database_subnet_group" {
+  description = "ID of database subnet group"
+  value       = module.vpc.database_subnet_group
+}
+
+output "database_subnet_group_name" {
+  description = "Name of database subnet group"
+  value       = module.vpc.database_subnet_group_name
+}
+
 output "vpc_elasticache_subnets" {
   description = "IDs of the VPC's elasticache subnets."
   value       = module.vpc.elasticache_subnets
