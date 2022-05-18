@@ -20,6 +20,8 @@ module "db" {
   password = aws_ssm_parameter.master_password.value
   port     = var.port
 
+  create_random_password = false
+
   multi_az               = var.multi_az
   subnet_ids             = var.subnet_ids
   db_subnet_group_name   = var.db_subnet_group_name
