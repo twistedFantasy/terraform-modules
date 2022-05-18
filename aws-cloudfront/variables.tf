@@ -123,6 +123,12 @@ variable "geo_restriction" {
   default     = {}
 }
 
+variable "custom_error_response" {
+  type        = any
+  description = "One or more custom error response elements"
+  default     = {}
+}
+
 
 locals {
 

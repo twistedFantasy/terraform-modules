@@ -22,6 +22,7 @@ module "cloudfront" {
   ordered_cache_behavior = var.ordered_cache_behavior
   viewer_certificate     = var.viewer_certificate
   geo_restriction        = var.geo_restriction
+  custom_error_response  = var.custom_error_response
 
   tags = local.common_tags
 }

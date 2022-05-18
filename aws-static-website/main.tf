@@ -57,4 +57,13 @@ module "aws_cloudfront" {
 
   create_origin_access_identity = true
   origin_access_identities      = { "${local.base_name}-private" = "${local.base_name}-private" }
+
+  custom_error_response = [
+    {
+      error_code            = "403",
+      response_code         = "200",
+      response_page_path    = "/${var.cloudfront_default_root_object}",
+      error_caching_min_ttl = 10
+    }
+  ]
 }
