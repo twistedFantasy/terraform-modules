@@ -38,4 +38,6 @@ repos:
       - id: terraform-docs-go
         args: [ "markdown", "table", "--output-file", "README.md", "./aws-vpc" ]
       - id: terraform-docs-go
+        args: [ "markdown", "table", "--output-file", "README.md", "./aws-vpc-peering" ]
+      - id: terraform-docs-go
         args: [ "markdown", "table", "--output-file", "README.md", "./gitlab" ]

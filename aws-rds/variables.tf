@@ -283,7 +283,7 @@ locals {
   permitted_security_groups = [
     for record in var.permitted_security_groups :
     {
-      rule                     = "postgres-tcp"
+      rule                     = "postgresql-tcp"
       source_security_group_id = record
     }
   ]
