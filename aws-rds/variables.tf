@@ -275,7 +275,7 @@ locals {
   permitted_ip_ranges = [
     for record in var.permitted_ip_ranges :
     {
-      rule        = "postgres-tcp"
+      rule        = "postgresql-tcp"
       cidr_blocks = record
     }
   ]
