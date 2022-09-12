@@ -41,6 +41,7 @@ No resources.
 | <a name="input_private_subnets"></a> [private\_subnets](#input\_private\_subnets) | Private subnets for VPC. | `list(string)` | <pre>[<br>  "10.36.1.0/24",<br>  "10.36.2.0/24"<br>]</pre> | no |
 | <a name="input_public_subnet_tags"></a> [public\_subnet\_tags](#input\_public\_subnet\_tags) | Additional tags for the public subnets. | `map(any)` | `{}` | no |
 | <a name="input_public_subnets"></a> [public\_subnets](#input\_public\_subnets) | Public subnets for VPC. | `list(string)` | <pre>[<br>  "10.36.101.0/24",<br>  "10.36.102.0/24"<br>]</pre> | no |
+| <a name="input_single_nat_gateway"></a> [single\_nat\_gateway](#input\_single\_nat\_gateway) | Should be true if you want to provision a single shared NAT Gateway across all of your private networks. | `bool` | `true` | no |
 
 ## Outputs
 

@@ -15,6 +15,7 @@ module "vpc" {
   elasticache_subnets                = var.elasticache_subnets
   create_elasticache_subnet_group    = var.create_elasticache_subnet_group
   enable_nat_gateway                 = var.enable_nat_gateway
+  single_nat_gateway                 = var.single_nat_gateway
   enable_dns_hostnames               = var.enable_dns_hostnames
 
   public_subnet_tags  = var.public_subnet_tags
